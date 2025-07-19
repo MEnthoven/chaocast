@@ -1,0 +1,12 @@
+dash
+dash-leaflet
+xarray
+pandas
+numpy
+tqdm
+python-dotenv
+pyproj
+seaborn
+matplotlib
+pygrib 
+sqlalchemy

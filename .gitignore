@@ -1,0 +1,7 @@
+data/
+.conda/
+__pycache__/
+optimized/
+.env
+tests/
+files/

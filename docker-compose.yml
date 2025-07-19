@@ -7,6 +7,6 @@ services:
     env_file:
       - .env
     volumes:
-      - ./files:/app/data
+      - ./data:/app/data
     stdin_open: true      # Keep STDIN open (for interactive mode)
     tty: true             # Allocate a pseudo-TTY (for interactive mode)

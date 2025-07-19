@@ -6,7 +6,12 @@ Chaocast leverages Python, XArray and Dash to provide interactive visualizations
 
 Visit the [KNMI](https://www.knmidata.nl/open-data/harmonie#:~:text=KNMI%20gebruikt%20en%20mede-ontwikkelt,hoge%20resolutie%20op%20korte%20afstanden.) site for more information on ensemble forecasts.
 
+
+<figure>
 <img src="image.png" alt="alt text" width="500"/>
+  <figcaption>Temperature and Precipitaition Percentile Confidence Interval plot. Light blue: 90% confidence, 9/10 members. Dark blue = 50% confidence, 5/10 members. Dotted line: Median Forecast.</figcaption>
+</figure>
+
 
 
 
@@ -30,23 +35,19 @@ Visit the [KNMI](https://www.knmidata.nl/open-data/harmonie#:~:text=KNMI%20gebru
      ```
 
 ### Running with Docker
-
-
-
-1. **Build the image and start the docker container **
+1. **Build the image and start the docker container**
    ```
    docker compose up --build
    ```
 
-3. **Follow the instructions in the terminal**
-    - The app will download approximately 12GB of forecasts to the `./data` folder
-    - All files will be unpacked and merged into a single NetCDF file.  :warning: Local testing showed that at least 16GB of free memory is required. Consider increasing Docker memory limits if running into issues.
+2. **Wait for approximately 20 minutes to finish downloading and preprocessing**
+    - The app will download approximately 12GB of forecasts to the local `./data` folder
+    - All files will be unpacked and preprocessed into a single NetCDF file. 
 
 > [!WARNING] 
-> Local testing showed that at least 16GB of free memory is required. Consider increasing Docker memory limits if running into issues. [!WARNING]
+> Local testing showed that peak memory usage can exceed 18GB. Consider increasing Docker memory limits if you're running into issues.
 
 
-
-4. **Access the dashboard:**
+3. **Access the dashboard:**
    - Open your browser and go to [http://localhost:8050](http://localhost:8050)
    - Click on any location on the map to visualize the uncertainty in weather forecasts.

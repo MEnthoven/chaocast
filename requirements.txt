@@ -10,3 +10,5 @@ seaborn
 matplotlib
 pygrib 
 sqlalchemy
+scipy
+netCDF4

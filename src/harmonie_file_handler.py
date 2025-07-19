@@ -172,7 +172,7 @@ class HarmonieFileHandler:
         combined_ds = xr.concat(datasets, dim='run_number')
         
         self.logger.info("Sorting dataset by run_number")
-        # combined_ds = combined_ds.sortby('run_number', ascending=True)
+        combined_ds = combined_ds.sortby('run_number', ascending=True)
 
         self.logger.info("Computing precipitation difference")
         combined_ds['prec_diff'] = combined_ds['prec'].diff('valid_time')

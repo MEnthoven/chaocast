@@ -31,19 +31,20 @@ Visit the [KNMI](https://www.knmidata.nl/open-data/harmonie#:~:text=KNMI%20gebru
 
 ### Running with Docker
 
-1. **Build the Docker image:**
-   ```
-   docker build -t chaocast-app .
-   ```
 
-2. **Run the container in interactive terminal mode:**
+
+1. **Build the image and start the docker container **
    ```
-   docker run -p 8050:8050 --env-file .env -it chaocast-app
+   docker compose up --build
    ```
 
 3. **Follow the instructions in the terminal**
     - The app will download approximately 12GB of forecasts to the `./data` folder
-    - All files will be unpacked and merged into a single NetCDF file.  [!WARNING] Requires quite some memory, consider increasing Docker memory limits if running into memory issues
+    - All files will be unpacked and merged into a single NetCDF file.  :warning: Local testing showed that at least 16GB of free memory is required. Consider increasing Docker memory limits if running into issues.
+
+> [!WARNING] 
+> Local testing showed that at least 16GB of free memory is required. Consider increasing Docker memory limits if running into issues. [!WARNING]
+
 
 
 4. **Access the dashboard:**

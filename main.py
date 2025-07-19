@@ -101,7 +101,7 @@ def main():
     c = conn.cursor()
     c.execute("SELECT filename FROM netcdf_files WHERE removed = FALSE ORDER BY created_at DESC LIMIT 1")
     latest_file = c.fetchone()
-    conn.close()    
+        
     if latest_file:
         logger.info("Setting environment variable NETCDF_PATH to the latest file")
         name = str(Path('data') / latest_file[0])        
@@ -120,9 +120,11 @@ def main():
         # logger.warning("No NetCDF files found in database")
         # sys.exit(1)
 
+    conn.close()
+
     from src.dashboard import app
     logger.info("Starting dashboard")
-    app.run(debug=False)
+    app.run(debug=False, host='0.0.0.0', port=str(8050))
     
 
 if __name__ == "__main__":

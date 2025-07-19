@@ -40,7 +40,7 @@ Visit the [KNMI](https://www.knmidata.nl/open-data/harmonie#:~:text=KNMI%20gebru
    docker compose up --build
    ```
 
-2. **Wait for approximately 20 minutes to finish downloading and preprocessing**
+2. **Wait for approximately 20 minutes (depends on Internet speed) to finish downloading and preprocessing**
     - The app will download approximately 12GB of forecasts to the local `./data` folder
     - All files will be unpacked and preprocessed into a single NetCDF file. 
 

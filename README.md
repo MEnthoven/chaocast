@@ -1,8 +1,12 @@
-# Chaocast
-Chaocast is a weather unceratinty visualization app.
+# About this app
+This application offers an  approach to visualizing weather forecast uncertainty. Instead of a single, definitive forecast, it presents the spectrum of possible weather outcomes, empowering users to make more informed decisions.
 
 ## Overview
-Chaocast leverages Python, XArray and Dash to provide interactive visualizations of weather forecast uncertainty using ensemble data from the KNMI HARMONIE Cy43 model. The goal is to help users explore and understand the range of possible weather outcomes at specific locations, supporting better decision-making in the face of meteorological uncertainty.
+The app's interactive visualizations of meteorological uncertainty are achieved by analyzing the full 36-member ensemble data from the KNMI HARMONIE Cy43 model. To accomplish this, the app utilizes (among other tools):
+- Xarray, netCDF4, and pygrib: These are for efficiently reading and handling complex, multi-dimensional weather data.
+- Dash and Dash-Leaflet: These build the interactive web isualizations of meteorological uncertainty.
+  
+Currently, the app focuses on visualizing uncertainty for temperature and precipitation, but its flexible architecture allows for easy extension to include other relevant meteorological variables. The core objective is to help you explore and comprehend the diverse range of potential weather scenarios for specific locations.
 
 Visit the [KNMI](https://www.knmidata.nl/open-data/harmonie#:~:text=KNMI%20gebruikt%20en%20mede-ontwikkelt,hoge%20resolutie%20op%20korte%20afstanden.) site for more information on ensemble forecasts.
 
